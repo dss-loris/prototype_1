@@ -1,0 +1,209 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A2 23386 16535
+encoding utf-8
+Sheet 1 26
+Title "Electrical Power System"
+Date "2019-04-25"
+Rev "1.0"
+Comp "Dalhousie Space Systems"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MSP430:MSP430F5529IPN U?
+U 1 1 5CC1E5CF
+P 15400 9300
+F 0 "U?" H 18300 9687 60  0000 C CNN
+F 1 "MSP430F5529IPN" H 18300 9581 60  0000 C CNN
+F 2 "PN80" H 18300 9540 60  0001 C CNN
+F 3 "" H 15400 9300 60  0000 C CNN
+	1    15400 9300
+	1    0    0    -1  
+$EndComp
+Text GLabel 1500 6850 0    50   Input ~ 0
+5V
+$Comp
+L Regulator_Switching:LM5165Y U?
+U 1 1 5CC35387
+P 2600 7150
+F 0 "U?" H 2600 7717 50  0000 C CNN
+F 1 "LM5165Y" H 2600 7626 50  0000 C CNN
+F 2 "Package_SON:Texas_S-PVSON-N10_ThermalVias" H 2650 6700 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm5165.pdf" H 2600 7700 50  0001 C CNN
+	1    2600 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 5CC42FF5
+P 2500 7650
+F 0 "#PWR?" H 2500 7400 50  0001 C CNN
+F 1 "GNDD" H 2504 7495 50  0000 C CNN
+F 2 "" H 2500 7650 50  0001 C CNN
+F 3 "" H 2500 7650 50  0001 C CNN
+	1    2500 7650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 5CC422C7
+P 3550 7150
+F 0 "#PWR?" H 3550 6900 50  0001 C CNN
+F 1 "GNDD" H 3554 6995 50  0000 C CNN
+F 2 "" H 3550 7150 50  0001 C CNN
+F 3 "" H 3550 7150 50  0001 C CNN
+	1    3550 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 6850 3750 6850
+Connection ~ 3550 6850
+$Comp
+L Device:C C?
+U 1 1 5CC41E22
+P 3550 7000
+F 0 "C?" H 3665 7046 50  0000 L CNN
+F 1 "13uF" H 3665 6955 50  0000 L CNN
+F 2 "" H 3588 6850 50  0001 C CNN
+F 3 "~" H 3550 7000 50  0001 C CNN
+	1    3550 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 6850 3550 6850
+Connection ~ 2150 6850
+Wire Wire Line
+	1700 6850 2150 6850
+$Comp
+L power:GNDD #PWR?
+U 1 1 5CC3F4C2
+P 1700 7150
+F 0 "#PWR?" H 1700 6900 50  0001 C CNN
+F 1 "GNDD" H 1704 6995 50  0000 C CNN
+F 2 "" H 1700 7150 50  0001 C CNN
+F 3 "" H 1700 7150 50  0001 C CNN
+	1    1700 7150
+	1    0    0    -1  
+$EndComp
+Connection ~ 1700 6850
+Wire Wire Line
+	1500 6850 1700 6850
+$Comp
+L Device:C C?
+U 1 1 5CC3ED13
+P 1700 7000
+F 0 "C?" H 1815 7046 50  0000 L CNN
+F 1 "13uF" H 1815 6955 50  0000 L CNN
+F 2 "" H 1738 6850 50  0001 C CNN
+F 3 "~" H 1700 7000 50  0001 C CNN
+	1    1700 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 7350 3300 7350
+$Comp
+L power:GNDD #PWR?
+U 1 1 5CC3D13E
+P 3400 7350
+F 0 "#PWR?" H 3400 7100 50  0001 C CNN
+F 1 "GNDD" H 3404 7195 50  0000 C CNN
+F 2 "" H 3400 7350 50  0001 C CNN
+F 3 "" H 3400 7350 50  0001 C CNN
+	1    3400 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5CC3B760
+P 3150 7350
+F 0 "R?" V 3250 7350 50  0000 C CNN
+F 1 "100k" V 3350 7350 50  0000 C BNN
+F 2 "" V 3080 7350 50  0001 C CNN
+F 3 "~" H 3150 7350 50  0001 C CNN
+	1    3150 7350
+	0    1    1    0   
+$EndComp
+NoConn ~ 3000 7250
+Wire Wire Line
+	2150 6950 2150 6850
+Wire Wire Line
+	2200 6950 2150 6950
+Wire Wire Line
+	2200 6850 2150 6850
+Connection ~ 3300 6850
+Wire Wire Line
+	3300 7050 3300 6850
+Wire Wire Line
+	3000 7050 3300 7050
+Text GLabel 3750 6850 2    50   Input ~ 0
+3.3V
+$Comp
+L Device:L L?
+U 1 1 5CC398EF
+P 3150 6850
+F 0 "L?" V 3340 6850 50  0000 C CNN
+F 1 "373uH" V 3249 6850 50  0000 C CNN
+F 2 "" H 3150 6850 50  0001 C CNN
+F 3 "~" H 3150 6850 50  0001 C CNN
+	1    3150 6850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2000 7250 2200 7250
+$Comp
+L power:GNDD #PWR?
+U 1 1 5CC36A17
+P 2000 7250
+F 0 "#PWR?" H 2000 7000 50  0001 C CNN
+F 1 "GNDD" H 2004 7095 50  0000 C CNN
+F 2 "" H 2000 7250 50  0001 C CNN
+F 3 "" H 2000 7250 50  0001 C CNN
+	1    2000 7250
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	1300 6500 1300 7850
+Wire Notes Line
+	1300 7850 4050 7850
+Wire Notes Line
+	4050 7850 4050 6500
+Wire Notes Line
+	1300 6500 4050 6500
+Text Notes 3450 6600 0    50   ~ 0
+3.3V Regulator
+$Comp
+L Battery_Management:LTC4002ES8-4.2 U?
+U 1 1 5CC6668C
+P 7250 10650
+F 0 "U?" H 7250 11231 50  0000 C CNN
+F 1 "LTC4002ES8-4.2" H 7250 11140 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7250 10200 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/4002f.pdf" H 6850 11000 50  0001 C CNN
+	1    7250 10650
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 1300 4850 2750 1350
+U 5CC6D79E
+F0 "Solar Cell Regulators" 50
+F1 "SolarRegulator.sch" 50
+F2 "VOUT" I R 4050 5600 50 
+$EndSheet
+Text GLabel 4050 5600 2    50   Input ~ 0
+5V
+$Comp
+L power:GNDD #PWR?
+U 1 1 5CCE1E30
+P 2200 7450
+F 0 "#PWR?" H 2200 7200 50  0001 C CNN
+F 1 "GNDD" H 2204 7295 50  0000 C CNN
+F 2 "" H 2200 7450 50  0001 C CNN
+F 3 "" H 2200 7450 50  0001 C CNN
+	1    2200 7450
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
