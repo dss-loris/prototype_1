@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Main-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1021,22 +1022,10 @@ Text Label 3600 7150 0    50   ~ 0
 V+
 Text Label 5500 7150 0    50   ~ 0
 V+
-Text Label 7300 4500 2    50   ~ 0
+Text Label 7100 4000 0    50   ~ 0
 V+
-Wire Notes Line
-	9100 4150 9100 4850
-Wire Notes Line
-	9100 4850 7800 4850
-Wire Notes Line
-	7800 4850 7800 4150
-Wire Notes Line
-	7800 4150 9100 4150
 Wire Wire Line
-	7300 4500 7800 4500
-Wire Wire Line
-	9100 4500 9550 4500
-Text HLabel 9550 4500 2    50   Input ~ 0
+	7100 4000 7700 4000
+Text HLabel 7700 4000 2    50   Input ~ 0
 VOUT
-Text Notes 7800 4050 0    50   ~ 0
-Current Sensor & Switch go here\n
 $EndSCHEMATC
