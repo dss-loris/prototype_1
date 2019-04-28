@@ -36,8 +36,6 @@ F 3 "" H 2000 1150 50  0001 C CNN
 	1    2000 1150
 	1    0    0    -1  
 $EndComp
-Text GLabel 1850 850  2    50   Input ~ 0
-5V
 Text GLabel 950  850  0    50   Input ~ 0
 +Z_01
 $Comp
@@ -76,8 +74,6 @@ F 3 "" H 2000 2050 50  0001 C CNN
 	1    2000 2050
 	1    0    0    -1  
 $EndComp
-Text GLabel 1850 1750 2    50   Input ~ 0
-5V
 Text GLabel 950  1750 0    50   Input ~ 0
 +Z_02
 $Comp
@@ -116,8 +112,6 @@ F 3 "" H 2000 2950 50  0001 C CNN
 	1    2000 2950
 	1    0    0    -1  
 $EndComp
-Text GLabel 1850 2650 2    50   Input ~ 0
-5V
 Text GLabel 950  2650 0    50   Input ~ 0
 +Z_03
 $Comp
@@ -156,8 +150,6 @@ F 3 "" H 2000 3850 50  0001 C CNN
 	1    2000 3850
 	1    0    0    -1  
 $EndComp
-Text GLabel 1850 3550 2    50   Input ~ 0
-5V
 Text GLabel 950  3550 0    50   Input ~ 0
 +Z_04
 $Comp
@@ -196,8 +188,6 @@ F 3 "" H 2000 4750 50  0001 C CNN
 	1    2000 4750
 	1    0    0    -1  
 $EndComp
-Text GLabel 1850 4450 2    50   Input ~ 0
-5V
 Text GLabel 950  4450 0    50   Input ~ 0
 +Z_05
 $Comp
@@ -236,8 +226,6 @@ F 3 "" H 2000 5650 50  0001 C CNN
 	1    2000 5650
 	1    0    0    -1  
 $EndComp
-Text GLabel 1850 5350 2    50   Input ~ 0
-5V
 Text GLabel 950  5350 0    50   Input ~ 0
 +Z_06
 $Comp
@@ -276,8 +264,6 @@ F 3 "" H 2000 6550 50  0001 C CNN
 	1    2000 6550
 	1    0    0    -1  
 $EndComp
-Text GLabel 1850 6250 2    50   Input ~ 0
-5V
 Text GLabel 950  6250 0    50   Input ~ 0
 +Z_07
 $Comp
@@ -316,8 +302,6 @@ F 3 "" H 2000 7450 50  0001 C CNN
 	1    2000 7450
 	1    0    0    -1  
 $EndComp
-Text GLabel 1850 7150 2    50   Input ~ 0
-5V
 Text GLabel 950  7150 0    50   Input ~ 0
 +Z_08
 $Comp
@@ -356,8 +340,6 @@ F 3 "" H 3750 1150 50  0001 C CNN
 	1    3750 1150
 	1    0    0    -1  
 $EndComp
-Text GLabel 3600 850  2    50   Input ~ 0
-5V
 Text GLabel 2700 850  0    50   Input ~ 0
 +Z_09
 $Comp
@@ -396,8 +378,6 @@ F 3 "" H 3750 2050 50  0001 C CNN
 	1    3750 2050
 	1    0    0    -1  
 $EndComp
-Text GLabel 3600 1750 2    50   Input ~ 0
-5V
 Text GLabel 2700 1750 0    50   Input ~ 0
 +Z_10
 $Comp
@@ -436,8 +416,6 @@ F 3 "" H 3750 2950 50  0001 C CNN
 	1    3750 2950
 	1    0    0    -1  
 $EndComp
-Text GLabel 3600 2650 2    50   Input ~ 0
-5V
 Text GLabel 2700 2650 0    50   Input ~ 0
 +Z_11
 $Comp
@@ -476,8 +454,6 @@ F 3 "" H 3750 3850 50  0001 C CNN
 	1    3750 3850
 	1    0    0    -1  
 $EndComp
-Text GLabel 3600 3550 2    50   Input ~ 0
-5V
 Text GLabel 2700 3550 0    50   Input ~ 0
 +Z_12
 $Comp
@@ -516,8 +492,6 @@ F 3 "" H 3750 4750 50  0001 C CNN
 	1    3750 4750
 	1    0    0    -1  
 $EndComp
-Text GLabel 3600 4450 2    50   Input ~ 0
-5V
 Text GLabel 2700 4450 0    50   Input ~ 0
 +Z_13
 $Comp
@@ -556,8 +530,6 @@ F 3 "" H 3750 5650 50  0001 C CNN
 	1    3750 5650
 	1    0    0    -1  
 $EndComp
-Text GLabel 3600 5350 2    50   Input ~ 0
-5V
 Text GLabel 2700 5350 0    50   Input ~ 0
 +Z_14
 $Comp
@@ -596,8 +568,6 @@ F 3 "" H 3750 6550 50  0001 C CNN
 	1    3750 6550
 	1    0    0    -1  
 $EndComp
-Text GLabel 3600 6250 2    50   Input ~ 0
-5V
 Text GLabel 2700 6250 0    50   Input ~ 0
 +Z_15
 $Comp
@@ -636,8 +606,6 @@ F 3 "" H 3750 7450 50  0001 C CNN
 	1    3750 7450
 	1    0    0    -1  
 $EndComp
-Text GLabel 3600 7150 2    50   Input ~ 0
-5V
 Text GLabel 2700 7150 0    50   Input ~ 0
 +Z_16
 $Comp
@@ -676,8 +644,6 @@ F 3 "" H 5600 1150 50  0001 C CNN
 	1    5600 1150
 	1    0    0    -1  
 $EndComp
-Text GLabel 5450 850  2    50   Input ~ 0
-5V
 $Comp
 L power:GNDD #PWR?
 U 1 1 5CCB1B54
@@ -711,8 +677,6 @@ F5 "V-" I R 5450 2050 50
 $EndSheet
 Wire Wire Line
 	5450 2050 5600 2050
-Text GLabel 5450 1750 2    50   Input ~ 0
-5V
 $Comp
 L power:GNDD #PWR?
 U 1 1 5CCB4B66
@@ -768,8 +732,6 @@ F 3 "" H 5600 2950 50  0001 C CNN
 	1    5600 2950
 	1    0    0    -1  
 $EndComp
-Text GLabel 5450 2650 2    50   Input ~ 0
-5V
 $Comp
 L power:GNDD #PWR?
 U 1 1 5CCB70A7
@@ -803,8 +765,6 @@ F5 "V-" I R 5450 3850 50
 $EndSheet
 Wire Wire Line
 	5450 3850 5600 3850
-Text GLabel 5450 3550 2    50   Input ~ 0
-5V
 $Comp
 L power:GNDD #PWR?
 U 1 1 5CCB70BA
@@ -860,8 +820,6 @@ F 3 "" H 5600 4750 50  0001 C CNN
 	1    5600 4750
 	1    0    0    -1  
 $EndComp
-Text GLabel 5450 4450 2    50   Input ~ 0
-5V
 $Comp
 L power:GNDD #PWR?
 U 1 1 5CCBF4AB
@@ -895,8 +853,6 @@ F5 "V-" I R 5450 5650 50
 $EndSheet
 Wire Wire Line
 	5450 5650 5600 5650
-Text GLabel 5450 5350 2    50   Input ~ 0
-5V
 $Comp
 L power:GNDD #PWR?
 U 1 1 5CCBF4BE
@@ -952,8 +908,6 @@ F 3 "" H 5600 6550 50  0001 C CNN
 	1    5600 6550
 	1    0    0    -1  
 $EndComp
-Text GLabel 5450 6250 2    50   Input ~ 0
-5V
 $Comp
 L power:GNDD #PWR?
 U 1 1 5CCBF4DD
@@ -987,8 +941,6 @@ F5 "V-" I R 5450 7450 50
 $EndSheet
 Wire Wire Line
 	5450 7450 5600 7450
-Text GLabel 5450 7150 2    50   Input ~ 0
-5V
 $Comp
 L power:GNDD #PWR?
 U 1 1 5CCBF4F0
@@ -1021,4 +973,70 @@ F 3 "" H 5600 7450 50  0001 C CNN
 	1    5600 7450
 	1    0    0    -1  
 $EndComp
+Text Label 1850 850  0    50   ~ 0
+V+
+Text Label 1850 1750 0    50   ~ 0
+V+
+Text Label 3600 2650 0    50   ~ 0
+V+
+Text Label 1850 2650 0    50   ~ 0
+V+
+Text Label 3600 1750 0    50   ~ 0
+V+
+Text Label 3600 850  0    50   ~ 0
+V+
+Text Label 5450 850  0    50   ~ 0
+V+
+Text Label 5450 1750 0    50   ~ 0
+V+
+Text Label 5450 2650 0    50   ~ 0
+V+
+Text Label 5450 3550 0    50   ~ 0
+V+
+Text Label 3600 3550 0    50   ~ 0
+V+
+Text Label 1850 3550 0    50   ~ 0
+V+
+Text Label 1850 4450 0    50   ~ 0
+V+
+Text Label 3600 4450 0    50   ~ 0
+V+
+Text Label 5450 4450 0    50   ~ 0
+V+
+Text Label 5450 5350 0    50   ~ 0
+V+
+Text Label 3600 5350 0    50   ~ 0
+V+
+Text Label 3600 6250 0    50   ~ 0
+V+
+Text Label 5450 6250 0    50   ~ 0
+V+
+Text Label 1850 6250 0    50   ~ 0
+V+
+Text Label 1850 5350 0    50   ~ 0
+V+
+Text Label 1850 7150 0    50   ~ 0
+V+
+Text Label 3600 7150 0    50   ~ 0
+V+
+Text Label 5500 7150 0    50   ~ 0
+V+
+Text Label 7300 4500 2    50   ~ 0
+V+
+Wire Notes Line
+	9100 4150 9100 4850
+Wire Notes Line
+	9100 4850 7800 4850
+Wire Notes Line
+	7800 4850 7800 4150
+Wire Notes Line
+	7800 4150 9100 4150
+Wire Wire Line
+	7300 4500 7800 4500
+Wire Wire Line
+	9100 4500 9550 4500
+Text HLabel 9550 4500 2    50   Input ~ 0
+VOUT
+Text Notes 7800 4050 0    50   ~ 0
+Current Sensor & Switch go here\n
 $EndSCHEMATC

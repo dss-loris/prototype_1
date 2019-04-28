@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Main-cache
 EELAYER 29 0
 EELAYER END
 $Descr A2 23386 16535
@@ -193,7 +194,7 @@ F0 "Solar Cell Regulators" 50
 F1 "SolarRegulator.sch" 50
 F2 "VOUT" I R 4050 5600 50 
 $EndSheet
-Text GLabel 4050 5600 2    50   Input ~ 0
+Text GLabel 5500 5600 2    50   Input ~ 0
 5V
 $Comp
 L power:GNDD #PWR?
@@ -206,4 +207,18 @@ F 3 "" H 2200 7450 50  0001 C CNN
 	1    2200 7450
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4050 5600 4350 5600
+Wire Wire Line
+	5500 5600 5250 5600
+Wire Notes Line
+	4350 5400 4350 5750
+Wire Notes Line
+	4350 5750 5250 5750
+Wire Notes Line
+	5250 5750 5250 5400
+Wire Notes Line
+	5250 5400 4350 5400
+Text Notes 4250 5350 0    50   ~ 0
+load switch & current sensor
 $EndSCHEMATC
