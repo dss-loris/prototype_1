@@ -1,11 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:Main-cache
-LIBS:batteryCharger-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 26
+Sheet 2 27
 Title ""
 Date ""
 Rev ""
