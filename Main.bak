@@ -1,11 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:Main-cache
-LIBS:batteryCharger-cache
 EELAYER 29 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
-Sheet 1 26
+Sheet 1 27
 Title "Electrical Power System"
 Date "2019-04-25"
 Rev "1.0"
@@ -16,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MSP430:MSP430F5529IPN U?
+L Main-rescue:MSP430F5529IPN-MSP430 U?
 U 1 1 5CC1E5CF
 P 15400 9300
 F 0 "U?" H 18300 9687 60  0000 C CNN
@@ -202,20 +201,6 @@ F 3 "" H 2100 5450 50  0001 C CNN
 	1    2100 5450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3950 3600 4250 3600
-Wire Wire Line
-	5400 3600 5150 3600
-Wire Notes Line
-	4250 3400 4250 3750
-Wire Notes Line
-	4250 3750 5150 3750
-Wire Notes Line
-	5150 3750 5150 3400
-Wire Notes Line
-	5150 3400 4250 3400
-Text Notes 4150 3350 0    50   ~ 0
-load switch & current sensor
 $Comp
 L Device:R R?
 U 1 1 5CB79A55
@@ -622,17 +607,6 @@ Text Notes 5550 13850 0    50   ~ 0
 2-cell 1S2P Li-Ion Battery Pack
 $Comp
 L power:+5V #PWR?
-U 1 1 5CCD36FF
-P 5400 3600
-F 0 "#PWR?" H 5400 3450 50  0001 C CNN
-F 1 "+5V" H 5415 3773 50  0000 C CNN
-F 2 "" H 5400 3600 50  0001 C CNN
-F 3 "" H 5400 3600 50  0001 C CNN
-	1    5400 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
 U 1 1 5CCD3B1F
 P 1400 4850
 F 0 "#PWR?" H 1400 4700 50  0001 C CNN
@@ -662,7 +636,7 @@ ACS
 Text GLabel 21250 6750 2    50   Input ~ 0
 RF
 $Comp
-L CustomSymbols:TPS2557 U?
+L Main-rescue:TPS2557-CustomSymbols U?
 U 1 1 5CCDA99B
 P 19850 4350
 F 0 "U?" H 19850 4475 50  0000 C CNN
@@ -766,7 +740,7 @@ Wire Wire Line
 	18950 4550 18450 4550
 Connection ~ 18950 4550
 $Comp
-L CustomSymbols:TPS2557 U?
+L Main-rescue:TPS2557-CustomSymbols U?
 U 1 1 5CCED852
 P 19850 5450
 F 0 "U?" H 19850 5575 50  0000 C CNN
@@ -866,11 +840,8 @@ $EndComp
 Wire Wire Line
 	20750 5650 21250 5650
 Connection ~ 20750 5650
-Wire Wire Line
-	18950 5650 18450 5650
-Connection ~ 18950 5650
 $Comp
-L CustomSymbols:TPS2557 U?
+L Main-rescue:TPS2557-CustomSymbols U?
 U 1 1 5CCF116D
 P 19850 6550
 F 0 "U?" H 19850 6675 50  0000 C CNN
@@ -974,17 +945,6 @@ Wire Wire Line
 	18950 6750 18450 6750
 Connection ~ 18950 6750
 $Comp
-L CustomSymbols:TPS2557 U?
-U 1 1 5CCF47EF
-P 19850 3250
-F 0 "U?" H 19850 3375 50  0000 C CNN
-F 1 "TPS2557" H 19850 3284 50  0000 C CNN
-F 2 "" H 19850 3250 50  0001 C CNN
-F 3 "" H 19850 3250 50  0001 C CNN
-	1    19850 3250
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GNDD #PWR?
 U 1 1 5CCF47F5
 P 19150 3200
@@ -999,21 +959,6 @@ Wire Wire Line
 	19150 3200 19450 3200
 Wire Wire Line
 	19450 3200 19450 3350
-NoConn ~ 19450 3550
-NoConn ~ 20250 3550
-Wire Wire Line
-	18950 3450 19450 3450
-$Comp
-L Device:R R?
-U 1 1 5CCF4800
-P 20250 3800
-F 0 "R?" H 20320 3846 50  0000 L CNN
-F 1 "R" H 20320 3755 50  0000 L CNN
-F 2 "" V 20180 3800 50  0001 C CNN
-F 3 "~" H 20250 3800 50  0001 C CNN
-	1    20250 3800
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GNDD #PWR?
 U 1 1 5CCF4806
@@ -1023,6 +968,362 @@ F 1 "GNDD" H 20254 3795 50  0000 C CNN
 F 2 "" H 20250 3950 50  0001 C CNN
 F 3 "" H 20250 3950 50  0001 C CNN
 	1    20250 3950
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	21750 3000 21750 7550
+Wire Notes Line
+	21750 7550 15750 7550
+Wire Notes Line
+	15750 3000 21750 3000
+Text Notes 18300 2900 0    50   ~ 0
+Power Distribution Unit (PDU)
+Text HLabel 14150 3900 0    50   Input ~ 0
+EPS-
+Text HLabel 14150 3800 0    50   Input ~ 0
+EPS+
+Text HLabel 14150 3550 0    50   Input ~ 0
+ACS-
+Text HLabel 14150 3450 0    50   Input ~ 0
+ACS+
+Text HLabel 14150 4200 0    50   Input ~ 0
+RF-
+Text HLabel 14150 4100 0    50   Input ~ 0
+RF+
+Text HLabel 14150 4400 0    50   Input ~ 0
+PAYLOAD+
+Text HLabel 14150 4500 0    50   Input ~ 0
+PAYLOAD-
+Text HLabel 14150 4700 0    50   Input ~ 0
+OBC+
+Text HLabel 14150 4800 0    50   Input ~ 0
+OBC-
+Text HLabel 14150 5150 0    50   Input ~ 0
+Ibat+
+Text HLabel 14150 5250 0    50   Input ~ 0
+Ibat-
+Text HLabel 14150 5450 0    50   Input ~ 0
+Ipv+
+Text HLabel 14150 5550 0    50   Input ~ 0
+Ipv-
+$Sheet
+S 12750 3200 1400 2500
+U 5CC6870C
+F0 "Sheet5CC6870B" 50
+F1 "Current Sesnsing.sch" 50
+$EndSheet
+Wire Wire Line
+	18350 3300 18350 3200
+Text Label 18350 3200 1    50   ~ 0
+OBC-
+Text Label 18150 3200 1    50   ~ 0
+OBC+
+Wire Wire Line
+	18150 3300 18150 3200
+$Comp
+L Device:R_Shunt R?
+U 1 1 5CD62395
+P 14950 1850
+F 0 "R?" H 14863 1896 50  0000 R CNN
+F 1 "250k" H 14863 1805 50  0000 R CNN
+F 2 "" V 14880 1850 50  0001 C CNN
+F 3 "~" H 14950 1850 50  0001 C CNN
+	1    14950 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5CD64044
+P 14950 1350
+F 0 "R?" H 15020 1396 50  0000 L CNN
+F 1 "250k" H 15020 1305 50  0000 L CNN
+F 2 "" V 14880 1350 50  0001 C CNN
+F 3 "~" H 14950 1350 50  0001 C CNN
+	1    14950 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5CD6C7C7
+P 14950 1050
+F 0 "#PWR?" H 14950 900 50  0001 C CNN
+F 1 "+5V" H 14965 1223 50  0000 C CNN
+F 2 "" H 14950 1050 50  0001 C CNN
+F 3 "" H 14950 1050 50  0001 C CNN
+	1    14950 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14950 1200 14950 1050
+Wire Wire Line
+	14950 1650 14950 1500
+Wire Wire Line
+	14950 2050 14950 2200
+$Comp
+L power:GNDD #PWR?
+U 1 1 5CD79849
+P 14950 2200
+F 0 "#PWR?" H 14950 1950 50  0001 C CNN
+F 1 "GNDD" H 14954 2045 50  0000 C CNN
+F 2 "" H 14950 2200 50  0001 C CNN
+F 3 "" H 14950 2200 50  0001 C CNN
+	1    14950 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Shunt R?
+U 1 1 5CD7C7DA
+P 16050 1850
+F 0 "R?" H 15963 1896 50  0000 R CNN
+F 1 "165k" H 15963 1805 50  0000 R CNN
+F 2 "" V 15980 1850 50  0001 C CNN
+F 3 "~" H 16050 1850 50  0001 C CNN
+	1    16050 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5CD7C7E0
+P 16050 1350
+F 0 "R?" H 16120 1396 50  0000 L CNN
+F 1 "165k" H 16120 1305 50  0000 L CNN
+F 2 "" V 15980 1350 50  0001 C CNN
+F 3 "~" H 16050 1350 50  0001 C CNN
+	1    16050 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	16050 1200 16050 1050
+Wire Wire Line
+	16050 1650 16050 1500
+Wire Wire Line
+	16050 2050 16050 2200
+$Comp
+L power:GNDD #PWR?
+U 1 1 5CD7C7EF
+P 16050 2200
+F 0 "#PWR?" H 16050 1950 50  0001 C CNN
+F 1 "GNDD" H 16054 2045 50  0000 C CNN
+F 2 "" H 16050 2200 50  0001 C CNN
+F 3 "" H 16050 2200 50  0001 C CNN
+	1    16050 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5CD81F19
+P 16050 1050
+F 0 "#PWR?" H 16050 900 50  0001 C CNN
+F 1 "+3.3V" H 16065 1223 50  0000 C CNN
+F 2 "" H 16050 1050 50  0001 C CNN
+F 3 "" H 16050 1050 50  0001 C CNN
+	1    16050 1050
+	1    0    0    -1  
+$EndComp
+NoConn ~ 16200 1950
+NoConn ~ 15100 1950
+Wire Wire Line
+	15100 1750 15350 1750
+Wire Wire Line
+	15350 1750 15350 1550
+Text GLabel 15350 1550 1    50   Input ~ 0
+5V_ADC
+Wire Wire Line
+	16200 1750 16450 1750
+Wire Wire Line
+	16450 1750 16450 1550
+Text GLabel 16450 1550 1    50   Input ~ 0
+3.3V_ADC
+Wire Wire Line
+	17700 4550 17700 4400
+Wire Wire Line
+	18050 4550 17700 4550
+Wire Wire Line
+	18350 4400 18350 4300
+Text Label 18350 4300 1    50   ~ 0
+PAYLOAD-
+Text Label 18150 4300 1    50   ~ 0
+PAYLOAD+
+Wire Wire Line
+	18150 4400 18150 4300
+$Comp
+L Device:R_Shunt R?
+U 1 1 5CD9E908
+P 18250 4550
+F 0 "R?" V 18117 4550 50  0000 C CNN
+F 1 "TBD" V 18026 4550 50  0000 C CNN
+F 2 "" V 18180 4550 50  0001 C CNN
+F 3 "~" H 18250 4550 50  0001 C CNN
+	1    18250 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	17700 6750 17700 6600
+Wire Wire Line
+	18050 6750 17700 6750
+Wire Wire Line
+	18350 6600 18350 6500
+Text Label 18350 6500 1    50   ~ 0
+RF-
+Text Label 18150 6500 1    50   ~ 0
+RF+
+Wire Wire Line
+	18150 6600 18150 6500
+$Comp
+L Device:R_Shunt R?
+U 1 1 5CDA1372
+P 18250 6750
+F 0 "R?" V 18117 6750 50  0000 C CNN
+F 1 "TBD" V 18026 6750 50  0000 C CNN
+F 2 "" V 18180 6750 50  0001 C CNN
+F 3 "~" H 18250 6750 50  0001 C CNN
+	1    18250 6750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	18950 5650 18450 5650
+Wire Wire Line
+	17700 5650 17700 5500
+Wire Wire Line
+	18050 5650 17700 5650
+Wire Wire Line
+	18350 5500 18350 5400
+Text Label 18350 5400 1    50   ~ 0
+ACS-
+Text Label 18150 5400 1    50   ~ 0
+ACS+
+Wire Wire Line
+	18150 5500 18150 5400
+$Comp
+L Device:R_Shunt R?
+U 1 1 5CDA5595
+P 18250 5650
+F 0 "R?" V 18117 5650 50  0000 C CNN
+F 1 "TBD" V 18026 5650 50  0000 C CNN
+F 2 "" V 18180 5650 50  0001 C CNN
+F 3 "~" H 18250 5650 50  0001 C CNN
+	1    18250 5650
+	0    -1   -1   0   
+$EndComp
+Text Label 14350 4750 0    50   ~ 0
+OBC-
+Text Label 14350 4650 0    50   ~ 0
+OBC+
+Wire Wire Line
+	14250 4800 14250 4750
+Wire Wire Line
+	14250 4750 14350 4750
+Wire Wire Line
+	14150 4800 14250 4800
+Wire Wire Line
+	14150 4700 14250 4700
+Wire Wire Line
+	14250 4700 14250 4650
+Wire Wire Line
+	14250 4650 14350 4650
+Text Label 14350 4450 0    50   ~ 0
+PAYLOAD-
+Text Label 14350 4350 0    50   ~ 0
+PAYLOAD+
+Wire Wire Line
+	14250 4500 14250 4450
+Wire Wire Line
+	14250 4450 14350 4450
+Wire Wire Line
+	14150 4500 14250 4500
+Wire Wire Line
+	14150 4400 14250 4400
+Wire Wire Line
+	14250 4400 14250 4350
+Wire Wire Line
+	14250 4350 14350 4350
+Text Label 14350 3500 0    50   ~ 0
+ACS-
+Text Label 14350 3400 0    50   ~ 0
+ACS+
+Wire Wire Line
+	14250 3550 14250 3500
+Wire Wire Line
+	14250 3500 14350 3500
+Wire Wire Line
+	14150 3550 14250 3550
+Wire Wire Line
+	14150 3450 14250 3450
+Wire Wire Line
+	14250 3450 14250 3400
+Wire Wire Line
+	14250 3400 14350 3400
+Wire Wire Line
+	14250 4200 14250 4150
+Wire Wire Line
+	14250 4150 14350 4150
+Wire Wire Line
+	14150 4200 14250 4200
+Wire Wire Line
+	14150 4100 14250 4100
+Wire Wire Line
+	14250 4100 14250 4050
+Wire Wire Line
+	14250 4050 14350 4050
+Text Label 14350 4050 0    50   ~ 0
+RF+
+Text Label 14350 4150 0    50   ~ 0
+RF-
+$Comp
+L Device:R_Shunt R?
+U 1 1 5CD2DCB4
+P 18250 3450
+F 0 "R?" V 18117 3450 50  0000 C CNN
+F 1 "TBD" V 18026 3450 50  0000 C CNN
+F 2 "" V 18180 3450 50  0001 C CNN
+F 3 "~" H 18250 3450 50  0001 C CNN
+	1    18250 3450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	18050 3450 17700 3450
+Wire Wire Line
+	17700 3450 17700 3300
+Wire Notes Line
+	15750 7550 15750 3000
+Wire Wire Line
+	18950 3450 18450 3450
+Wire Wire Line
+	20750 3450 21250 3450
+$Comp
+L power:GNDD #PWR?
+U 1 1 5CCF481F
+P 20750 3750
+F 0 "#PWR?" H 20750 3500 50  0001 C CNN
+F 1 "GNDD" H 20754 3595 50  0000 C CNN
+F 2 "" H 20750 3750 50  0001 C CNN
+F 3 "" H 20750 3750 50  0001 C CNN
+	1    20750 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5CCF4819
+P 20750 3600
+F 0 "C?" H 20865 3646 50  0000 L CNN
+F 1 "150u" H 20865 3555 50  0000 L CNN
+F 2 "" H 20788 3450 50  0001 C CNN
+F 3 "~" H 20750 3600 50  0001 C CNN
+	1    20750 3600
+	1    0    0    -1  
+$EndComp
+Connection ~ 20750 3450
+Wire Wire Line
+	20250 3450 20750 3450
+$Comp
+L power:GNDD #PWR?
+U 1 1 5CCF4812
+P 18950 3750
+F 0 "#PWR?" H 18950 3500 50  0001 C CNN
+F 1 "GNDD" H 18954 3595 50  0000 C CNN
+F 2 "" H 18950 3750 50  0001 C CNN
+F 3 "" H 18950 3750 50  0001 C CNN
+	1    18950 3750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1037,54 +1338,105 @@ F 3 "~" H 18950 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDD #PWR?
-U 1 1 5CCF4812
-P 18950 3750
-F 0 "#PWR?" H 18950 3500 50  0001 C CNN
-F 1 "GNDD" H 18954 3595 50  0000 C CNN
-F 2 "" H 18950 3750 50  0001 C CNN
-F 3 "" H 18950 3750 50  0001 C CNN
-	1    18950 3750
+L Device:R R?
+U 1 1 5CCF4800
+P 20250 3800
+F 0 "R?" H 20320 3846 50  0000 L CNN
+F 1 "R" H 20320 3755 50  0000 L CNN
+F 2 "" V 20180 3800 50  0001 C CNN
+F 3 "~" H 20250 3800 50  0001 C CNN
+	1    20250 3800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	20250 3450 20750 3450
-$Comp
-L Device:C C?
-U 1 1 5CCF4819
-P 20750 3600
-F 0 "C?" H 20865 3646 50  0000 L CNN
-F 1 "150u" H 20865 3555 50  0000 L CNN
-F 2 "" H 20788 3450 50  0001 C CNN
-F 3 "~" H 20750 3600 50  0001 C CNN
-	1    20750 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDD #PWR?
-U 1 1 5CCF481F
-P 20750 3750
-F 0 "#PWR?" H 20750 3500 50  0001 C CNN
-F 1 "GNDD" H 20754 3595 50  0000 C CNN
-F 2 "" H 20750 3750 50  0001 C CNN
-F 3 "" H 20750 3750 50  0001 C CNN
-	1    20750 3750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	20750 3450 21250 3450
-Connection ~ 20750 3450
-Wire Wire Line
-	18950 3450 18450 3450
 Connection ~ 18950 3450
+Wire Wire Line
+	18950 3450 19450 3450
+NoConn ~ 20250 3550
+NoConn ~ 19450 3550
+$Comp
+L Main-rescue:TPS2557-CustomSymbols U?
+U 1 1 5CCF47EF
+P 19850 3250
+F 0 "U?" H 19850 3375 50  0000 C CNN
+F 1 "TPS2557" H 19850 3284 50  0000 C CNN
+F 2 "" H 19850 3250 50  0001 C CNN
+F 3 "" H 19850 3250 50  0001 C CNN
+	1    19850 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14250 3900 14250 3850
+Wire Wire Line
+	14250 3850 14350 3850
+Wire Wire Line
+	14150 3900 14250 3900
+Wire Wire Line
+	14150 3800 14250 3800
+Wire Wire Line
+	14250 3800 14250 3750
+Wire Wire Line
+	14250 3750 14350 3750
+Text Notes 4600 2900 0    50   ~ 0
+load switch & current sensor
+Wire Wire Line
+	4850 3450 4850 3350
+Text Label 4850 3350 1    50   ~ 0
+Ipv-
+Text Label 4650 3350 1    50   ~ 0
+Ipv+
+Wire Wire Line
+	4650 3450 4650 3350
+$Comp
+L Device:R_Shunt R?
+U 1 1 5CEAEC6D
+P 4750 3600
+F 0 "R?" V 4617 3600 50  0000 C CNN
+F 1 "TBD" V 4526 3600 50  0000 C CNN
+F 2 "" V 4680 3600 50  0001 C CNN
+F 3 "~" H 4750 3600 50  0001 C CNN
+	1    4750 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5CCD36FF
+P 4300 3600
+F 0 "#PWR?" H 4300 3450 50  0001 C CNN
+F 1 "+5V" H 4315 3773 50  0000 C CNN
+F 2 "" H 4300 3600 50  0001 C CNN
+F 3 "" H 4300 3600 50  0001 C CNN
+	1    4300 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 3600 4300 3600
+Connection ~ 4300 3600
+Wire Wire Line
+	4300 3600 4550 3600
+Wire Wire Line
+	4950 3600 5400 3600
+Text Label 14350 5500 0    50   ~ 0
+Ipv-
+Text Label 14350 5400 0    50   ~ 0
+Ipv+
+Wire Wire Line
+	14250 5550 14250 5500
+Wire Wire Line
+	14250 5500 14350 5500
+Wire Wire Line
+	14150 5550 14250 5550
+Wire Wire Line
+	14150 5450 14250 5450
+Wire Wire Line
+	14250 5450 14250 5400
+Wire Wire Line
+	14250 5400 14350 5400
 Wire Notes Line
-	21750 3000 21750 7550
+	4100 2950 6400 2950
 Wire Notes Line
-	21750 7550 15750 7550
+	6400 2950 6400 4200
 Wire Notes Line
-	15750 7550 15750 3000
+	6400 4200 4100 4200
 Wire Notes Line
-	15750 3000 21750 3000
-Text Notes 18300 2900 0    50   ~ 0
-Power Distribution Unit (PDU)
+	4100 4200 4100 2950
 $EndSCHEMATC

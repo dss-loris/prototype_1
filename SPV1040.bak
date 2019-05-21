@@ -1,11 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:Main-cache
-LIBS:batteryCharger-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 21 26
+Sheet 21 27
 Title ""
 Date ""
 Rev ""
@@ -107,13 +106,14 @@ F 3 "" H 5600 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CustomSymbols:SPV1040 U?
+L Main-rescue:SPV1040-CustomSymbols U?
 U 1 1 5CCC8FA6
 P 5850 4150
 AR Path="/5CC6D79E/5CC8FD75/5CCC8FA6" Ref="U?"  Part="1" 
 AR Path="/5CC6D79E/5CCAFF7B/5CCC8FA6" Ref="U?"  Part="1" 
 AR Path="/5CC6D79E/5CCB70B2/5CCC8FA6" Ref="U?"  Part="1" 
 AR Path="/5CC6D79E/5CCB7099/5CCC8FA6" Ref="U?"  Part="1" 
+AR Path="/5CCC8FA6" Ref="U?"  Part="1" 
 F 0 "U?" H 6000 5065 50  0000 C CNN
 F 1 "SPV1040" H 6000 4974 50  0000 C CNN
 F 2 "" H 5850 4150 50  0001 C CNN
