@@ -1,10 +1,12 @@
 EESchema Schematic File Version 4
 LIBS:Main-cache
+LIBS:4.2-5V_regulator-cache
+LIBS:555_timer-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 27
+Sheet 2 29
 Title ""
 Date ""
 Rev ""
