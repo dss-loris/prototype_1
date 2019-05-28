@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
-Sheet 1 28
+Sheet 1 32
 Title "Electrical Power System"
 Date "2019-04-25"
 Rev "1.0"
@@ -282,12 +282,12 @@ Wire Wire Line
 $Comp
 L Device:Thermistor_NTC TH?
 U 1 1 5CB7A5F8
-P 4700 14450
-F 0 "TH?" H 4797 14496 50  0000 L CNN
-F 1 "10k" H 4797 14405 50  0000 L CNN
-F 2 "" H 4700 14500 50  0001 C CNN
-F 3 "~" H 4700 14500 50  0001 C CNN
-	1    4700 14450
+P 2300 14800
+F 0 "TH?" H 2397 14846 50  0000 L CNN
+F 1 "10k" H 2397 14755 50  0000 L CNN
+F 2 "" H 2300 14850 50  0001 C CNN
+F 3 "~" H 2300 14850 50  0001 C CNN
+	1    2300 14800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -356,8 +356,8 @@ Wire Wire Line
 	5200 11500 5200 11450
 Wire Wire Line
 	4600 11500 4600 11450
-NoConn ~ 6750 14450
-NoConn ~ 6750 14550
+NoConn ~ 6950 14900
+NoConn ~ 6950 15000
 $Comp
 L Connector_Generic:Conn_01x02 J?
 U 1 1 5CB7B11F
@@ -440,112 +440,47 @@ F 3 "" H 4100 11000 50  0001 C CNN
 	1    4100 11000
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:Battery_Cell BT?
-U 1 1 5CC9EF70
-P 5300 14500
-F 0 "BT?" H 5000 14600 50  0000 L CNN
-F 1 "Cell1" H 5000 14500 50  0000 L CNN
-F 2 "" V 5300 14560 50  0001 C CNN
-F 3 "~" V 5300 14560 50  0001 C CNN
-	1    5300 14500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Battery_Cell BT?
-U 1 1 5CC9FB6D
-P 5500 14500
-F 0 "BT?" H 5618 14596 50  0000 L CNN
-F 1 "Cell2" H 5618 14505 50  0000 L CNN
-F 2 "" V 5500 14560 50  0001 C CNN
-F 3 "~" V 5500 14560 50  0001 C CNN
-	1    5500 14500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	5500 14300 5400 14300
-$Comp
-L Connector:USB_A J?
-U 1 1 5CB82268
-P 7050 14450
-F 0 "J?" H 6820 14441 50  0000 R CNN
-F 1 "USB_A FEMALE" H 6820 14350 50  0000 R CNN
-F 2 "" H 7200 14400 50  0001 C CNN
-F 3 " ~" H 7200 14400 50  0001 C CNN
-	1    7050 14450
-	-1   0    0    -1  
-$EndComp
-Wire Notes Line
-	5300 14950 5500 14950
-Wire Notes Line
-	5500 14950 5500 15250
-Wire Notes Line
-	5500 15250 5300 15250
-Wire Notes Line
-	5300 15250 5300 14950
-Text Notes 5550 15150 0    50   ~ 0
-Ground Leg Inhibit
-Wire Wire Line
-	5400 15250 5400 15400
+	4900 15400 4900 15550
 $Comp
 L power:GNDD #PWR?
 U 1 1 5CCACD90
-P 5400 15400
-F 0 "#PWR?" H 5400 15150 50  0001 C CNN
-F 1 "GNDD" H 5404 15245 50  0000 C CNN
-F 2 "" H 5400 15400 50  0001 C CNN
-F 3 "" H 5400 15400 50  0001 C CNN
-	1    5400 15400
+P 4900 15550
+F 0 "#PWR?" H 4900 15300 50  0001 C CNN
+F 1 "GNDD" H 4904 15395 50  0000 C CNN
+F 2 "" H 4900 15550 50  0001 C CNN
+F 3 "" H 4900 15550 50  0001 C CNN
+	1    4900 15550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5400 14300 5400 14100
-Connection ~ 5400 14300
-Wire Wire Line
-	5400 14300 5300 14300
-Text GLabel 5400 14100 2    50   Input ~ 0
-BAT
-Wire Wire Line
-	5300 14600 5400 14600
-Wire Wire Line
-	5400 14600 5400 14850
-Connection ~ 5400 14600
-Wire Wire Line
-	5400 14600 5500 14600
-Wire Wire Line
-	7050 14850 7150 14850
-Wire Wire Line
-	7050 14850 5400 14850
-Connection ~ 7050 14850
-Connection ~ 5400 14850
-Wire Wire Line
-	5400 14850 5400 14950
+	7250 15300 7350 15300
 $Comp
 L power:+5V #PWR?
 U 1 1 5CCB63EF
-P 6750 14250
-F 0 "#PWR?" H 6750 14100 50  0001 C CNN
-F 1 "+5V" V 6765 14378 50  0000 L CNN
-F 2 "" H 6750 14250 50  0001 C CNN
-F 3 "" H 6750 14250 50  0001 C CNN
-	1    6750 14250
+P 6950 14700
+F 0 "#PWR?" H 6950 14550 50  0001 C CNN
+F 1 "+5V" V 6965 14828 50  0000 L CNN
+F 2 "" H 6950 14700 50  0001 C CNN
+F 3 "" H 6950 14700 50  0001 C CNN
+	1    6950 14700
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	3600 12350 3600 12650
 Text GLabel 3600 12550 2    50   Input ~ 0
 BAT
-Text Label 4700 14300 0    50   ~ 0
+Text Label 2300 14650 0    50   ~ 0
 NTC
 $Comp
 L power:GNDD #PWR?
 U 1 1 5CCBA53E
-P 4700 14600
-F 0 "#PWR?" H 4700 14350 50  0001 C CNN
-F 1 "GNDD" H 4704 14445 50  0000 C CNN
-F 2 "" H 4700 14600 50  0001 C CNN
-F 3 "" H 4700 14600 50  0001 C CNN
-	1    4700 14600
+P 2300 14950
+F 0 "#PWR?" H 2300 14700 50  0001 C CNN
+F 1 "GNDD" H 2304 14795 50  0000 C CNN
+F 2 "" H 2300 14950 50  0001 C CNN
+F 3 "" H 2300 14950 50  0001 C CNN
+	1    2300 14950
 	1    0    0    -1  
 $EndComp
 Text Label 2400 12450 2    50   ~ 0
@@ -595,16 +530,8 @@ Wire Notes Line
 	1450 10650 5550 10650
 Text Notes 2850 10600 0    50   ~ 0
 Battery Charge Regulator (BCR)
-Wire Notes Line
-	4500 13900 7950 13900
-Wire Notes Line
-	7950 13900 7950 15750
-Wire Notes Line
-	7950 15750 4500 15750
-Wire Notes Line
-	4500 15750 4500 13900
-Text Notes 5550 13850 0    50   ~ 0
-2-cell 1S2P Li-Ion Battery Pack
+Text Notes 2000 14050 0    50   ~ 0
+4P Li-Ion Battery Pack
 $Comp
 L power:+5V #PWR?
 U 1 1 5CCD3B1F
@@ -1690,16 +1617,10 @@ Wire Notes Line
 	900  7100 900  10400
 Text Notes 8400 10350 0    50   ~ 0
 4.2 - 5VDC Regulator
-Text Notes 7400 7500 0    60   ~ 0
+Text Notes 10800 8300 0    60   ~ 0
 DAL ORBITS 30 minute inhibit switch
-Text Notes 10550 7650 0    60   ~ 0
-A\n
-Text Notes 8150 7650 0    60   ~ 0
+Text Notes 10750 8750 0    60   ~ 0
 April 6/2018
-Text Notes 10550 7350 0    60   ~ 0
-Zach McQuaid
-Text Notes 10500 7100 0    157  ~ 0
-Power
 Connection ~ 9900 12450
 Wire Wire Line
 	9900 12200 9900 12450
@@ -1938,4 +1859,113 @@ Wire Notes Line
 	6400 13450 6400 10650
 Text Notes 6500 13400 0    50   ~ 0
 30 Minute Timer
+$Sheet
+S 2650 14500 650  550 
+U 5D07F3FC
+F0 "Cell1" 50
+F1 "BatteryCell.sch" 50
+F2 "Cell+" I R 3300 14650 50 
+F3 "Cell-" I R 3300 14950 50 
+$EndSheet
+$Sheet
+S 3600 14500 650  550 
+U 5D0A75A0
+F0 "Cell2" 50
+F1 "BatteryCell.sch" 50
+F2 "Cell+" I R 4250 14650 50 
+F3 "Cell-" I R 4250 14950 50 
+$EndSheet
+$Sheet
+S 4550 14500 650  550 
+U 5D0B1FBC
+F0 "Cell3" 50
+F1 "BatteryCell.sch" 50
+F2 "Cell+" I R 5200 14650 50 
+F3 "Cell-" I R 5200 14950 50 
+$EndSheet
+$Sheet
+S 5500 14500 650  550 
+U 5D0BC9BA
+F0 "Cell4" 50
+F1 "BatteryCell.sch" 50
+F2 "Cell+" I R 6150 14650 50 
+F3 "Cell-" I R 6150 14950 50 
+$EndSheet
+Wire Wire Line
+	3300 14650 3500 14650
+Wire Wire Line
+	3500 14650 3500 14200
+Wire Wire Line
+	3500 14200 4400 14200
+Wire Wire Line
+	6400 14200 6400 14650
+Wire Wire Line
+	6150 14650 6400 14650
+Wire Wire Line
+	5200 14650 5350 14650
+Wire Wire Line
+	5350 14650 5350 14200
+Connection ~ 5350 14200
+Wire Wire Line
+	5350 14200 6400 14200
+Wire Wire Line
+	4250 14650 4400 14650
+Wire Wire Line
+	4400 14650 4400 14200
+Connection ~ 4400 14200
+Wire Wire Line
+	4400 14200 4850 14200
+Wire Wire Line
+	3300 14950 3500 14950
+Wire Wire Line
+	3500 14950 3500 15400
+Wire Wire Line
+	3500 15400 4400 15400
+Wire Wire Line
+	6400 15400 6400 14950
+Wire Wire Line
+	6400 14950 6150 14950
+Wire Wire Line
+	5200 14950 5350 14950
+Wire Wire Line
+	5350 14950 5350 15400
+Connection ~ 5350 15400
+Wire Wire Line
+	5350 15400 6400 15400
+Wire Wire Line
+	4250 14950 4400 14950
+Wire Wire Line
+	4400 14950 4400 15400
+Connection ~ 4400 15400
+Wire Wire Line
+	4400 15400 4900 15400
+Connection ~ 4900 15400
+Wire Wire Line
+	4900 15400 5350 15400
+Wire Wire Line
+	4850 14200 4850 14050
+Connection ~ 4850 14200
+Wire Wire Line
+	4850 14200 5350 14200
+Text GLabel 4850 14050 2    50   Input ~ 0
+BAT
+$Comp
+L Connector:USB_A J?
+U 1 1 5CB82268
+P 7250 14900
+F 0 "J?" H 7020 14891 50  0000 R CNN
+F 1 "USB_A FEMALE" H 7020 14800 50  0000 R CNN
+F 2 "" H 7400 14850 50  0001 C CNN
+F 3 " ~" H 7400 14850 50  0001 C CNN
+	1    7250 14900
+	-1   0    0    -1  
+$EndComp
+Wire Notes Line
+	1900 15800 8200 15800
+Wire Notes Line
+	8200 15800 8200 13900
+Wire Notes Line
+	8200 13900 1900 13900
+Wire Notes Line
+	1900 13900 1900 15800
 $EndSCHEMATC

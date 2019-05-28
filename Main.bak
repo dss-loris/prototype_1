@@ -1,17 +1,15 @@
 EESchema Schematic File Version 4
 LIBS:Main-cache
-LIBS:4.2-5V_regulator-cache
-LIBS:555_timer-cache
 EELAYER 29 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
-Sheet 1 29
+Sheet 1 28
 Title "Electrical Power System"
 Date "2019-04-25"
 Rev "1.0"
 Comp "Dalhousie Space Systems"
-Comment1 ""
+Comment1 "mark.crispo@dal.ca"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -1724,7 +1722,7 @@ Connection ~ 12200 13200
 Wire Wire Line
 	12200 13200 12200 13250
 $Comp
-L 555_timer-rescue:GNDA #PWR?
+L Main-rescue:GNDA-555_timer-rescue #PWR?
 U 1 1 5CA9BD0E
 P 11450 11700
 F 0 "#PWR?" H 11450 11450 50  0001 C CNN
@@ -1735,7 +1733,7 @@ F 3 "" H 11450 11700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 555_timer-rescue:GNDA #PWR?
+L Main-rescue:GNDA-555_timer-rescue #PWR?
 U 1 1 5CA9BCDC
 P 12200 13250
 F 0 "#PWR?" H 12200 13000 50  0001 C CNN
@@ -1762,7 +1760,7 @@ Wire Wire Line
 Connection ~ 13500 13200
 Connection ~ 9300 12050
 $Comp
-L 555_timer-rescue:10k R?
+L Main-rescue:10k-555_timer-rescue R?
 U 1 1 5CA9B9BF
 P 9300 11550
 F 0 "R?" H 9450 11750 60  0000 C CNN
@@ -1789,7 +1787,7 @@ Wire Wire Line
 Wire Wire Line
 	13150 12450 13500 12450
 $Comp
-L 555_timer-rescue:180uF C?
+L Main-rescue:180uF-555_timer-rescue C?
 U 1 1 5CA9B645
 P 13850 12850
 F 0 "C?" H 13950 13100 60  0000 C CNN
@@ -1800,7 +1798,7 @@ F 3 "" H 13850 12850 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 555_timer-rescue:10M R?
+L Main-rescue:10M-555_timer-rescue R?
 U 1 1 5CA9B579
 P 13850 11600
 F 0 "R?" H 14000 11800 60  0000 C CNN
@@ -1811,7 +1809,7 @@ F 3 "" H 13850 11600 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 555_timer-rescue:Diode D?
+L Main-rescue:Diode-555_timer-rescue D?
 U 1 1 5CA9B4AA
 P 14250 11700
 F 0 "D?" H 14400 11450 60  0000 C CNN
@@ -1822,7 +1820,7 @@ F 3 "" H 14250 11300 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L 555_timer-rescue:0.01uF C?
+L Main-rescue:0.01uF-555_timer-rescue C?
 U 1 1 5CA9B433
 P 13500 12850
 F 0 "C?" H 13600 13100 60  0000 C CNN
@@ -1833,7 +1831,7 @@ F 3 "" H 13500 12850 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 555_timer-rescue:FET(reversed) D?
+L Main-rescue:FET(reversed)-555_timer-rescue D?
 U 1 1 5CA9B390
 P 8800 12050
 F 0 "D?" H 8600 12050 60  0000 C CNN
@@ -1844,7 +1842,7 @@ F 3 "" H 8700 12050 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 555_timer-rescue:FET(reversed) D?
+L Main-rescue:FET(reversed)-555_timer-rescue D?
 U 1 1 5CA9B2ED
 P 9400 12450
 F 0 "D?" H 9200 12450 60  0000 C CNN
@@ -1855,7 +1853,7 @@ F 3 "" H 9300 12450 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 555_timer-rescue:10k R?
+L Main-rescue:10k-555_timer-rescue R?
 U 1 1 5CA9B240
 P 9900 12850
 F 0 "R?" H 10050 13050 60  0000 C CNN
@@ -1866,7 +1864,7 @@ F 3 "" H 9900 12850 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 555_timer-rescue:LM555_TIMER U?
+L Main-rescue:LM555_TIMER-555_timer-rescue U?
 U 1 1 5CA9B022
 P 12250 12050
 F 0 "U?" H 12300 12550 60  0000 C CNN
