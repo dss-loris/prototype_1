@@ -65,47 +65,41 @@ $EndComp
 $Comp
 L Transistor_FET:CSD16407Q5 Q?
 U 1 1 5D087B4E
-P 4750 4100
+P 4750 4350
 AR Path="/5D087B4E" Ref="Q?"  Part="1" 
 AR Path="/5D07F3FC/5D087B4E" Ref="Q?"  Part="1" 
 AR Path="/5D0A75A0/5D087B4E" Ref="Q?"  Part="1" 
 AR Path="/5D0B1FBC/5D087B4E" Ref="Q?"  Part="1" 
 AR Path="/5D0BC9BA/5D087B4E" Ref="Q?"  Part="1" 
-F 0 "Q?" V 5001 4100 50  0000 C CNN
-F 1 "CSD16407Q5" V 5092 4100 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TDSON-8-1" H 4950 4025 50  0001 L CIN
-F 3 "http://www.ti.com/lit/gpn/csd16407q5" V 4750 4100 50  0001 L CNN
-	1    4750 4100
+F 0 "Q?" V 5001 4350 50  0000 C CNN
+F 1 "CSD16407Q5" V 5092 4350 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TDSON-8-1" H 4950 4275 50  0001 L CIN
+F 3 "http://www.ti.com/lit/gpn/csd16407q5" V 4750 4350 50  0001 L CNN
+	1    4750 4350
 	0    1    1    0   
 $EndComp
 $Comp
 L Transistor_FET:CSD16407Q5 Q?
 U 1 1 5D087B54
-P 5150 4100
+P 5150 4350
 AR Path="/5D087B54" Ref="Q?"  Part="1" 
 AR Path="/5D07F3FC/5D087B54" Ref="Q?"  Part="1" 
 AR Path="/5D0A75A0/5D087B54" Ref="Q?"  Part="1" 
 AR Path="/5D0B1FBC/5D087B54" Ref="Q?"  Part="1" 
 AR Path="/5D0BC9BA/5D087B54" Ref="Q?"  Part="1" 
-F 0 "Q?" V 5401 4100 50  0000 C CNN
-F 1 "CSD16407Q5" V 5492 4100 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TDSON-8-1" H 5350 4025 50  0001 L CIN
-F 3 "http://www.ti.com/lit/gpn/csd16407q5" V 5150 4100 50  0001 L CNN
-	1    5150 4100
+F 0 "Q?" V 5401 4350 50  0000 C CNN
+F 1 "CSD16407Q5" V 5492 4350 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TDSON-8-1" H 5350 4275 50  0001 L CIN
+F 3 "http://www.ti.com/lit/gpn/csd16407q5" V 5150 4350 50  0001 L CNN
+	1    5150 4350
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	5300 3700 5150 3700
 Wire Wire Line
-	5150 3700 5150 3900
-Wire Wire Line
 	5300 3500 4750 3500
 Wire Wire Line
-	4750 3500 4750 3900
-Wire Wire Line
-	5700 3900 5700 4200
-Wire Wire Line
-	5700 4200 5350 4200
+	5700 4450 5450 4450
 $Comp
 L Device:R R?
 U 1 1 5D087B60
@@ -150,43 +144,103 @@ Connection ~ 6400 3500
 Wire Wire Line
 	6400 3500 6550 3500
 Wire Wire Line
-	5700 4200 6400 4200
-Connection ~ 5700 4200
+	5700 4450 6400 4450
+Connection ~ 5700 4450
+Connection ~ 6400 4450
 Wire Wire Line
-	6400 4200 6400 4000
-Connection ~ 6400 4200
-Wire Wire Line
-	6400 4200 7050 4200
+	6400 4450 7050 4450
 Wire Wire Line
 	6100 3700 6250 3700
 Wire Wire Line
 	6250 3700 6250 3150
 Wire Wire Line
-	6250 3150 4300 3150
-Wire Wire Line
-	4300 3150 4300 3600
+	4050 3150 4050 3600
 $Comp
 L Device:R R?
 U 1 1 5D087B7B
-P 4300 3750
+P 4050 3750
 AR Path="/5D087B7B" Ref="R?"  Part="1" 
 AR Path="/5D07F3FC/5D087B7B" Ref="R?"  Part="1" 
 AR Path="/5D0A75A0/5D087B7B" Ref="R?"  Part="1" 
 AR Path="/5D0B1FBC/5D087B7B" Ref="R?"  Part="1" 
 AR Path="/5D0BC9BA/5D087B7B" Ref="R?"  Part="1" 
-F 0 "R?" H 4230 3704 50  0000 R CNN
-F 1 "2.2k" H 4230 3795 50  0000 R CNN
-F 2 "" V 4230 3750 50  0001 C CNN
-F 3 "~" H 4300 3750 50  0001 C CNN
-	1    4300 3750
+F 0 "R?" H 3980 3704 50  0000 R CNN
+F 1 "2.2k" H 3980 3795 50  0000 R CNN
+F 2 "" V 3980 3750 50  0001 C CNN
+F 3 "~" H 4050 3750 50  0001 C CNN
+	1    4050 3750
+	-1   0    0    1   
+$EndComp
+Text HLabel 7050 3500 2    50   Input ~ 0
+Cell+
+Text HLabel 4050 4450 0    50   Input ~ 0
+Cell-
+$Comp
+L Device:R R?
+U 1 1 5CF617A0
+P 5450 4300
+AR Path="/5CF617A0" Ref="R?"  Part="1" 
+AR Path="/5D07F3FC/5CF617A0" Ref="R?"  Part="1" 
+AR Path="/5D0A75A0/5CF617A0" Ref="R?"  Part="1" 
+AR Path="/5D0B1FBC/5CF617A0" Ref="R?"  Part="1" 
+AR Path="/5D0BC9BA/5CF617A0" Ref="R?"  Part="1" 
+F 0 "R?" H 5380 4254 50  0000 R CNN
+F 1 "5M" H 5380 4345 50  0000 R CNN
+F 2 "" V 5380 4300 50  0001 C CNN
+F 3 "~" H 5450 4300 50  0001 C CNN
+	1    5450 4300
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4300 3900 4300 4200
+	7050 4200 7050 4450
 Wire Wire Line
-	4300 4200 4550 4200
-Text HLabel 7050 3500 2    50   Input ~ 0
-Cell+
-Text HLabel 4300 4200 0    50   Input ~ 0
-Cell-
+	6400 4000 6400 4450
+Wire Wire Line
+	5700 3900 5700 4450
+Wire Wire Line
+	5150 3700 5150 4050
+Wire Wire Line
+	4750 3500 4750 4050
+Wire Wire Line
+	4050 3900 4050 4450
+$Comp
+L Device:R R?
+U 1 1 5CF6AE03
+P 4400 4300
+AR Path="/5CF6AE03" Ref="R?"  Part="1" 
+AR Path="/5D07F3FC/5CF6AE03" Ref="R?"  Part="1" 
+AR Path="/5D0A75A0/5CF6AE03" Ref="R?"  Part="1" 
+AR Path="/5D0B1FBC/5CF6AE03" Ref="R?"  Part="1" 
+AR Path="/5D0BC9BA/5CF6AE03" Ref="R?"  Part="1" 
+F 0 "R?" H 4330 4254 50  0000 R CNN
+F 1 "5M" H 4330 4345 50  0000 R CNN
+F 2 "" V 4330 4300 50  0001 C CNN
+F 3 "~" H 4400 4300 50  0001 C CNN
+	1    4400 4300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4050 3150 6250 3150
+Connection ~ 5450 4450
+Wire Wire Line
+	5450 4450 5350 4450
+Connection ~ 4400 4450
+Wire Wire Line
+	4400 4450 4550 4450
+Wire Wire Line
+	4050 4450 4400 4450
+Wire Wire Line
+	4400 4150 4400 4050
+Wire Wire Line
+	4400 4050 4750 4050
+Connection ~ 4750 4050
+Wire Wire Line
+	4750 4050 4750 4150
+Wire Wire Line
+	5450 4150 5450 4050
+Wire Wire Line
+	5450 4050 5150 4050
+Connection ~ 5150 4050
+Wire Wire Line
+	5150 4050 5150 4150
 $EndSCHEMATC
