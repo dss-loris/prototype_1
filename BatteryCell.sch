@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 31 34
+Sheet 27 34
 Title ""
 Date ""
 Rev ""
@@ -31,22 +31,6 @@ F 3 "~" V 7050 4160 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Polyfuse F?
-U 1 1 5D087B42
-P 7050 3750
-AR Path="/5D087B42" Ref="F?"  Part="1" 
-AR Path="/5D07F3FC/5D087B42" Ref="F?"  Part="1" 
-AR Path="/5D0A75A0/5D087B42" Ref="F?"  Part="1" 
-AR Path="/5D0B1FBC/5D087B42" Ref="F?"  Part="1" 
-AR Path="/5D0BC9BA/5D087B42" Ref="F?"  Part="1" 
-F 0 "F?" H 7138 3796 50  0000 L CNN
-F 1 "Polyfuse" H 7138 3705 50  0000 L CNN
-F 2 "" H 7100 3550 50  0001 L CNN
-F 3 "~" H 7050 3750 50  0001 C CNN
-	1    7050 3750
-	1    0    0    -1  
-$EndComp
-$Comp
 L Battery_Management:BQ297xy U?
 U 1 1 5D087B48
 P 5700 3600
@@ -61,38 +45,6 @@ F 2 "Package_SON:WSON-6_1.5x1.5mm_P0.5mm" H 5700 3950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/bq2970.pdf" H 5450 3800 50  0001 C CNN
 	1    5700 3600
 	-1   0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:CSD16407Q5 Q?
-U 1 1 5D087B4E
-P 4750 4350
-AR Path="/5D087B4E" Ref="Q?"  Part="1" 
-AR Path="/5D07F3FC/5D087B4E" Ref="Q?"  Part="1" 
-AR Path="/5D0A75A0/5D087B4E" Ref="Q?"  Part="1" 
-AR Path="/5D0B1FBC/5D087B4E" Ref="Q?"  Part="1" 
-AR Path="/5D0BC9BA/5D087B4E" Ref="Q?"  Part="1" 
-F 0 "Q?" V 5001 4350 50  0000 C CNN
-F 1 "CSD16407Q5" V 5092 4350 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TDSON-8-1" H 4950 4275 50  0001 L CIN
-F 3 "http://www.ti.com/lit/gpn/csd16407q5" V 4750 4350 50  0001 L CNN
-	1    4750 4350
-	0    1    1    0   
-$EndComp
-$Comp
-L Transistor_FET:CSD16407Q5 Q?
-U 1 1 5D087B54
-P 5150 4350
-AR Path="/5D087B54" Ref="Q?"  Part="1" 
-AR Path="/5D07F3FC/5D087B54" Ref="Q?"  Part="1" 
-AR Path="/5D0A75A0/5D087B54" Ref="Q?"  Part="1" 
-AR Path="/5D0B1FBC/5D087B54" Ref="Q?"  Part="1" 
-AR Path="/5D0BC9BA/5D087B54" Ref="Q?"  Part="1" 
-F 0 "Q?" V 5401 4350 50  0000 C CNN
-F 1 "CSD16407Q5" V 5492 4350 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TDSON-8-1" H 5350 4275 50  0001 L CIN
-F 3 "http://www.ti.com/lit/gpn/csd16407q5" V 5150 4350 50  0001 L CNN
-	1    5150 4350
-	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	5300 3700 5150 3700
@@ -120,8 +72,6 @@ Wire Wire Line
 	6100 3500 6400 3500
 Wire Wire Line
 	6850 3500 7050 3500
-Wire Wire Line
-	7050 3500 7050 3600
 $Comp
 L Device:C C?
 U 1 1 5D087B69
@@ -221,9 +171,6 @@ F 3 "~" H 4400 4300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4050 3150 6250 3150
-Connection ~ 5450 4450
-Wire Wire Line
-	5450 4450 5350 4450
 Connection ~ 4400 4450
 Wire Wire Line
 	4400 4450 4550 4450
@@ -243,4 +190,35 @@ Wire Wire Line
 Connection ~ 5150 4050
 Wire Wire Line
 	5150 4050 5150 4150
+Text Notes 4450 4950 0    50   ~ 0
+Rds_on = 25 milliOhm each
+Text Notes 4450 5050 0    50   ~ 0
+Overcurrent triggers at 1.8A
+$Comp
+L Transistor_FET:CSD16301Q2 Q?
+U 1 1 5D0458C0
+P 4750 4350
+F 0 "Q?" V 5001 4350 50  0000 C CNN
+F 1 "CSD16301Q2" V 5092 4350 50  0000 C CNN
+F 2 "Package_SON:Texas_DQK" H 4950 4275 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/csd16301q2.pdf" V 4750 4350 50  0001 L CNN
+	1    4750 4350
+	0    1    1    0   
+$EndComp
+Connection ~ 5450 4450
+$Comp
+L Transistor_FET:CSD16301Q2 Q?
+U 1 1 5D04731F
+P 5150 4350
+F 0 "Q?" V 5401 4350 50  0000 C CNN
+F 1 "CSD16301Q2" V 5600 4350 50  0000 C CNN
+F 2 "Package_SON:Texas_DQK" H 5350 4275 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/csd16301q2.pdf" V 5150 4350 50  0001 L CNN
+	1    5150 4350
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5450 4450 5350 4450
+Wire Wire Line
+	7050 3500 7050 3900
 $EndSCHEMATC
