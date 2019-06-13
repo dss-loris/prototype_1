@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
-Sheet 1 34
+Sheet 1 33
 Title "Electrical Power System"
 Date "2019-04-25"
 Rev "1.0"
@@ -14,17 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Main-rescue:MSP430F5529IPN-MSP430 U?
-U 1 1 5CC1E5CF
-P 15400 9300
-F 0 "U?" H 18300 9687 60  0000 C CNN
-F 1 "MSP430F5529IPN" H 18300 9581 60  0000 C CNN
-F 2 "PN80" H 18300 9540 60  0001 C CNN
-F 3 "" H 15400 9300 60  0000 C CNN
-	1    15400 9300
-	1    0    0    -1  
-$EndComp
 $Sheet
 S 2650 2300 1050 550 
 U 5CC6D79E
@@ -448,34 +437,6 @@ F 3 "" H 16950 3050 50  0001 C CNN
 	1    16950 3050
 	1    0    0    -1  
 $EndComp
-Text HLabel 2050 10900 2    50   Input ~ 0
-EPS-
-Text HLabel 2050 11000 2    50   Input ~ 0
-EPS+
-Text HLabel 2050 11250 2    50   Input ~ 0
-ACS-
-Text HLabel 2050 11350 2    50   Input ~ 0
-ACS+
-Text HLabel 2050 10600 2    50   Input ~ 0
-RF-
-Text HLabel 2050 10700 2    50   Input ~ 0
-RF+
-Text HLabel 2050 10400 2    50   Input ~ 0
-PAYLOAD+
-Text HLabel 2050 10300 2    50   Input ~ 0
-PAYLOAD-
-Text HLabel 2050 10100 2    50   Input ~ 0
-OBC+
-Text HLabel 2050 10000 2    50   Input ~ 0
-OBC-
-Text HLabel 2050 9650 2    50   Input ~ 0
-Ibat+
-Text HLabel 2050 9550 2    50   Input ~ 0
-Ibat-
-Text HLabel 2050 9350 2    50   Input ~ 0
-Ipv+
-Text HLabel 2050 9250 2    50   Input ~ 0
-Ipv-
 Wire Wire Line
 	15050 2400 15050 2300
 Text Label 15050 2300 1    50   ~ 0
@@ -484,120 +445,6 @@ Text Label 14850 2300 1    50   ~ 0
 OBC+
 Wire Wire Line
 	14850 2400 14850 2300
-$Comp
-L Device:R_Shunt R?
-U 1 1 5CD62395
-P 4550 10050
-F 0 "R?" H 4463 10096 50  0000 R CNN
-F 1 "250k" H 4463 10005 50  0000 R CNN
-F 2 "" V 4480 10050 50  0001 C CNN
-F 3 "~" H 4550 10050 50  0001 C CNN
-	1    4550 10050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5CD64044
-P 4550 9550
-F 0 "R?" H 4620 9596 50  0000 L CNN
-F 1 "250k" H 4620 9505 50  0000 L CNN
-F 2 "" V 4480 9550 50  0001 C CNN
-F 3 "~" H 4550 9550 50  0001 C CNN
-	1    4550 9550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5CD6C7C7
-P 4550 9250
-F 0 "#PWR?" H 4550 9100 50  0001 C CNN
-F 1 "+5V" H 4565 9423 50  0000 C CNN
-F 2 "" H 4550 9250 50  0001 C CNN
-F 3 "" H 4550 9250 50  0001 C CNN
-	1    4550 9250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4550 9400 4550 9250
-Wire Wire Line
-	4550 9850 4550 9700
-Wire Wire Line
-	4550 10250 4550 10400
-$Comp
-L power:GNDD #PWR?
-U 1 1 5CD79849
-P 4550 10400
-F 0 "#PWR?" H 4550 10150 50  0001 C CNN
-F 1 "GNDD" H 4554 10245 50  0000 C CNN
-F 2 "" H 4550 10400 50  0001 C CNN
-F 3 "" H 4550 10400 50  0001 C CNN
-	1    4550 10400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Shunt R?
-U 1 1 5CD7C7DA
-P 5650 10050
-F 0 "R?" H 5563 10096 50  0000 R CNN
-F 1 "165k" H 5563 10005 50  0000 R CNN
-F 2 "" V 5580 10050 50  0001 C CNN
-F 3 "~" H 5650 10050 50  0001 C CNN
-	1    5650 10050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5CD7C7E0
-P 5650 9550
-F 0 "R?" H 5720 9596 50  0000 L CNN
-F 1 "165k" H 5720 9505 50  0000 L CNN
-F 2 "" V 5580 9550 50  0001 C CNN
-F 3 "~" H 5650 9550 50  0001 C CNN
-	1    5650 9550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5650 9400 5650 9250
-Wire Wire Line
-	5650 9850 5650 9700
-Wire Wire Line
-	5650 10250 5650 10400
-$Comp
-L power:GNDD #PWR?
-U 1 1 5CD7C7EF
-P 5650 10400
-F 0 "#PWR?" H 5650 10150 50  0001 C CNN
-F 1 "GNDD" H 5654 10245 50  0000 C CNN
-F 2 "" H 5650 10400 50  0001 C CNN
-F 3 "" H 5650 10400 50  0001 C CNN
-	1    5650 10400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5CD81F19
-P 5650 9250
-F 0 "#PWR?" H 5650 9100 50  0001 C CNN
-F 1 "+3.3V" H 5665 9423 50  0000 C CNN
-F 2 "" H 5650 9250 50  0001 C CNN
-F 3 "" H 5650 9250 50  0001 C CNN
-	1    5650 9250
-	1    0    0    -1  
-$EndComp
-NoConn ~ 5800 10150
-NoConn ~ 4700 10150
-Wire Wire Line
-	4700 9950 4950 9950
-Wire Wire Line
-	4950 9950 4950 9750
-Text GLabel 4950 9750 1    50   Input ~ 0
-5V_ADC
-Wire Wire Line
-	5800 9950 6050 9950
-Wire Wire Line
-	6050 9950 6050 9750
-Text GLabel 6050 9750 1    50   Input ~ 0
-3.3V_ADC
 Wire Wire Line
 	14750 3650 14400 3650
 Wire Wire Line
@@ -663,70 +510,6 @@ F 3 "~" H 14950 4750 50  0001 C CNN
 	1    14950 4750
 	0    -1   -1   0   
 $EndComp
-Text Label 1850 10050 2    50   ~ 0
-OBC-
-Text Label 1850 10150 2    50   ~ 0
-OBC+
-Wire Wire Line
-	1950 10000 1950 10050
-Wire Wire Line
-	1950 10050 1850 10050
-Wire Wire Line
-	2050 10000 1950 10000
-Wire Wire Line
-	2050 10100 1950 10100
-Wire Wire Line
-	1950 10100 1950 10150
-Wire Wire Line
-	1950 10150 1850 10150
-Text Label 1850 10350 2    50   ~ 0
-PAYLOAD-
-Text Label 1850 10450 2    50   ~ 0
-PAYLOAD+
-Wire Wire Line
-	1950 10300 1950 10350
-Wire Wire Line
-	1950 10350 1850 10350
-Wire Wire Line
-	2050 10300 1950 10300
-Wire Wire Line
-	2050 10400 1950 10400
-Wire Wire Line
-	1950 10400 1950 10450
-Wire Wire Line
-	1950 10450 1850 10450
-Text Label 1850 11300 2    50   ~ 0
-ACS-
-Text Label 1850 11400 2    50   ~ 0
-ACS+
-Wire Wire Line
-	1950 11250 1950 11300
-Wire Wire Line
-	1950 11300 1850 11300
-Wire Wire Line
-	2050 11250 1950 11250
-Wire Wire Line
-	2050 11350 1950 11350
-Wire Wire Line
-	1950 11350 1950 11400
-Wire Wire Line
-	1950 11400 1850 11400
-Wire Wire Line
-	1950 10600 1950 10650
-Wire Wire Line
-	1950 10650 1850 10650
-Wire Wire Line
-	2050 10600 1950 10600
-Wire Wire Line
-	2050 10700 1950 10700
-Wire Wire Line
-	1950 10700 1950 10750
-Wire Wire Line
-	1950 10750 1850 10750
-Text Label 1850 10750 2    50   ~ 0
-RF+
-Text Label 1850 10650 2    50   ~ 0
-RF-
 $Comp
 L Device:R_Shunt R?
 U 1 1 5CD2DCB4
@@ -819,18 +602,6 @@ F 3 "" H 16550 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1950 10900 1950 10950
-Wire Wire Line
-	1950 10950 1850 10950
-Wire Wire Line
-	2050 10900 1950 10900
-Wire Wire Line
-	2050 11000 1950 11000
-Wire Wire Line
-	1950 11000 1950 11050
-Wire Wire Line
-	1950 11050 1850 11050
-Wire Wire Line
 	4600 2400 4600 2300
 Text Label 4600 2300 1    50   ~ 0
 Ipv-
@@ -849,22 +620,6 @@ F 3 "~" H 4500 2550 50  0001 C CNN
 	1    4500 2550
 	0    -1   -1   0   
 $EndComp
-Text Label 1850 9300 2    50   ~ 0
-Ipv-
-Text Label 1850 9400 2    50   ~ 0
-Ipv+
-Wire Wire Line
-	1950 9250 1950 9300
-Wire Wire Line
-	1950 9300 1850 9300
-Wire Wire Line
-	2050 9250 1950 9250
-Wire Wire Line
-	2050 9350 1950 9350
-Wire Wire Line
-	1950 9350 1950 9400
-Wire Wire Line
-	1950 9400 1850 9400
 $Sheet
 S 5000 5150 650  550 
 U 5D07F3FC
@@ -1089,12 +844,6 @@ Wire Wire Line
 Wire Wire Line
 	14400 6850 14400 5850
 Connection ~ 14400 5850
-$Sheet
-S 2050 9100 1400 2500
-U 5CC6870C
-F0 "Sheet5CC6870B" 50
-F1 "Current Sesnsing.sch" 50
-$EndSheet
 Wire Wire Line
 	7250 6900 7250 7000
 $Comp
