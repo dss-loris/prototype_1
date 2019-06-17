@@ -421,36 +421,10 @@ Connection ~ 5000 8200
 Wire Wire Line
 	5000 8200 5000 8300
 Text Notes 4300 9100 0    50   ~ 0
-Rds_on = 25 milliOhm each
+Rds_on = 11 milliOhm each
 Text Notes 4300 9200 0    50   ~ 0
-Overcurrent triggers at 1.8A
-$Comp
-L Transistor_FET:CSD16301Q2 Q?
-U 1 1 5D06D004
-P 4600 8500
-AR Path="/5D07F3FC/5D06D004" Ref="Q?"  Part="1" 
-AR Path="/5D06D004" Ref="Q?"  Part="1" 
-F 0 "Q?" V 4851 8500 50  0000 C CNN
-F 1 "CSD16301Q2" V 4942 8500 50  0000 C CNN
-F 2 "Package_SON:Texas_DQK" H 4800 8425 50  0001 L CIN
-F 3 "http://www.ti.com/lit/ds/symlink/csd16301q2.pdf" V 4600 8500 50  0001 L CNN
-	1    4600 8500
-	0    1    1    0   
-$EndComp
+Overcurrent triggers at 4A
 Connection ~ 5300 8600
-$Comp
-L Transistor_FET:CSD16301Q2 Q?
-U 1 1 5D06D00B
-P 5000 8500
-AR Path="/5D07F3FC/5D06D00B" Ref="Q?"  Part="1" 
-AR Path="/5D06D00B" Ref="Q?"  Part="1" 
-F 0 "Q?" V 5251 8500 50  0000 C CNN
-F 1 "CSD16301Q2" V 5450 8500 50  0000 C CNN
-F 2 "Package_SON:Texas_DQK" H 5200 8425 50  0001 L CIN
-F 3 "http://www.ti.com/lit/ds/symlink/csd16301q2.pdf" V 5000 8500 50  0001 L CNN
-	1    5000 8500
-	0    -1   1    0   
-$EndComp
 Wire Wire Line
 	5300 8600 5200 8600
 Wire Wire Line
@@ -460,8 +434,10 @@ $Comp
 L Device:R R?
 U 1 1 5D084F67
 P 5550 5700
+AR Path="/5CF0B678/5D084F67" Ref="R?"  Part="1" 
+AR Path="/5D084F67" Ref="R?"  Part="1" 
 F 0 "R?" V 5650 5650 50  0000 C CNN
-F 1 "68m" V 5550 5700 50  0000 C CNN
+F 1 "59m" V 5550 5700 50  0000 C CNN
 F 2 "" V 5480 5700 50  0001 C CNN
 F 3 "~" H 5550 5700 50  0001 C CNN
 	1    5550 5700
@@ -905,4 +881,28 @@ Text Notes 2400 4900 0    50   ~ 0
 Not sure about this resistor\nLED indicates charging
 Text Notes 3750 6600 0    50   ~ 0
 Replace L to examine affect on ripple current
+Text Notes 3750 6700 0    50   ~ 0
+59 mOhms sets Ibat=1.7A
+$Comp
+L Transistor_FET:CSD17307Q5A Q?
+U 1 1 5D129066
+P 4600 8500
+F 0 "Q?" V 4851 8500 50  0000 C CNN
+F 1 "CSD17307Q5A" V 4942 8500 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TDSON-8-1" H 4800 8425 50  0001 L CIN
+F 3 "http://www.ti.com/lit/gpn/csd17307q5a" V 4600 8500 50  0001 L CNN
+	1    4600 8500
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:CSD17307Q5A Q?
+U 1 1 5D12E6ED
+P 5000 8500
+F 0 "Q?" V 5251 8500 50  0000 C CNN
+F 1 "CSD17307Q5A" V 5450 8500 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TDSON-8-1" H 5200 8425 50  0001 L CIN
+F 3 "http://www.ti.com/lit/gpn/csd17307q5a" V 5000 8500 50  0001 L CNN
+	1    5000 8500
+	0    -1   1    0   
+$EndComp
 $EndSCHEMATC
