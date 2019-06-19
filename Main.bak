@@ -39,17 +39,6 @@ Wire Wire Line
 Wire Wire Line
 	11350 4650 11350 4250
 Connection ~ 10550 4350
-$Comp
-L Main-rescue:TPS2557-CustomSymbols U5
-U 1 1 5D214D93
-P 11950 4150
-F 0 "U5" H 11950 4275 50  0000 C CNN
-F 1 "TPS2557" H 11950 4184 50  0000 C CNN
-F 2 "Package_SON:VSON-8_3.3x3.3mm_P0.65mm_NexFET" H 11950 4150 50  0001 C CNN
-F 3 "" H 11950 4150 50  0001 C CNN
-	1    11950 4150
-	1    0    0    -1  
-$EndComp
 NoConn ~ 11550 4450
 NoConn ~ 12350 4450
 Wire Wire Line
@@ -650,22 +639,6 @@ Wire Wire Line
 Wire Wire Line
 	13300 4350 12850 4350
 Connection ~ 12850 4350
-$Comp
-L Main-rescue:TPS2557-CustomSymbols U4
-U 1 1 5D0DC962
-P 11950 4150
-F 0 "U4" H 11950 4275 50  0000 C CNN
-F 1 "TPS2557" H 11950 4184 50  0000 C CNN
-F 2 "Package_SON:VSON-8_3.3x3.3mm_P0.65mm_NexFET" H 11950 4150 50  0001 C CNN
-F 3 "" H 11950 4150 50  0001 C CNN
-	1    11950 4150
-	1    0    0    -1  
-$EndComp
-Connection ~ 11550 4250
-Connection ~ 11550 4350
-Connection ~ 11550 4550
-Connection ~ 12350 4550
-Connection ~ 12350 4350
 NoConn ~ 12350 4250
 $Comp
 L Device:R R12
@@ -946,5 +919,16 @@ F 2 "Diode_SMD:D_SMC" H 6300 5325 50  0001 C CNN
 F 3 "http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf" H 6300 5500 50  0001 C CNN
 	1    6300 5500
 	0    1    1    0   
+$EndComp
+$Comp
+L Main-rescue:TPS2557-CustomSymbols U4
+U 1 1 5D0DC962
+P 11950 4150
+F 0 "U4" H 11950 4300 50  0000 C CNN
+F 1 "TPS2557" H 11950 4184 50  0000 C CNN
+F 2 "Package_DFN_QFN:DFN-8-1EP_3x3mm_P0.5mm_EP1.66x2.38mm" H 11950 4150 50  0001 C CNN
+F 3 "" H 11950 4150 50  0001 C CNN
+	1    11950 4150
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
