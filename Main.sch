@@ -895,7 +895,7 @@ U 1 1 5D115F12
 P 5150 7700
 F 0 "J6" H 5000 7400 50  0000 L CNN
 F 1 "Conn_01x03" H 4900 7500 50  0000 L CNN
-F 2 "Connector_PinSocket_2.00mm:PinSocket_1x03_P2.00mm_Vertical" H 5150 7700 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 5150 7700 50  0001 C CNN
 F 3 "~" H 5150 7700 50  0001 C CNN
 	1    5150 7700
 	1    0    0    -1  
@@ -931,7 +931,7 @@ U 1 1 5D147C15
 P 5400 7700
 F 0 "J7" H 5300 7400 50  0000 L CNN
 F 1 "Conn_01x03" H 5100 7500 50  0000 L CNN
-F 2 "Connector_PinSocket_2.00mm:PinSocket_1x03_P2.00mm_Vertical" H 5400 7700 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 5400 7700 50  0001 C CNN
 F 3 "~" H 5400 7700 50  0001 C CNN
 	1    5400 7700
 	-1   0    0    1   
@@ -944,4 +944,18 @@ Wire Wire Line
 NoConn ~ 4950 7600
 Text Notes 4000 7200 0    50   ~ 0
 J6 pins 1,2,3 are BQ29709 pins 1,2,3 repsectively.\nJ7 pins 1,2,3 are BQ29709 pins 4,5,6 respsectively.
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5D14B430
+P 13750 4350
+F 0 "TP4" V 13704 4538 50  0000 L CNN
+F 1 "TestPoint" V 13795 4538 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x01_P2.00mm_Vertical" H 13950 4350 50  0001 C CNN
+F 3 "~" H 13950 4350 50  0001 C CNN
+	1    13750 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	13300 4350 13750 4350
+Connection ~ 13300 4350
 $EndSCHEMATC
