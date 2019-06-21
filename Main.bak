@@ -207,28 +207,6 @@ F 3 "~" V 6900 8310 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Battery_Management:BQ297xy U2
-U 1 1 5D06CFBB
-P 5550 7750
-AR Path="/5D06CFBB" Ref="U2"  Part="1" 
-AR Path="/5D07F3FC/5D06CFBB" Ref="U?"  Part="1" 
-AR Path="/5D0A75A0/5D06CFBB" Ref="U?"  Part="1" 
-AR Path="/5D0B1FBC/5D06CFBB" Ref="U?"  Part="1" 
-AR Path="/5D0BC9BA/5D06CFBB" Ref="U?"  Part="1" 
-F 0 "U2" H 5550 8117 50  0000 C CNN
-F 1 "BQ297xy" H 5550 8026 50  0000 C CNN
-F 2 "Package_SON:WSON-6_1.5x1.5mm_P0.5mm" H 5550 8100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/bq2970.pdf" H 5300 7950 50  0001 C CNN
-	1    5550 7750
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	5150 7850 5000 7850
-Wire Wire Line
-	5150 7650 4600 7650
-Wire Wire Line
-	5550 8600 5300 8600
-$Comp
 L Device:R R7
 U 1 1 5D06CFC4
 P 6550 7650
@@ -244,8 +222,6 @@ F 3 "~" H 6550 7650 50  0001 C CNN
 	1    6550 7650
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5950 7650 6250 7650
 Wire Wire Line
 	6700 7650 6900 7650
 $Comp
@@ -265,20 +241,12 @@ F 3 "~" H 6250 8000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6250 7850 6250 7650
-Connection ~ 6250 7650
+	6250 7850 6250 7700
 Wire Wire Line
 	6250 7650 6400 7650
-Wire Wire Line
-	5550 8600 6250 8600
-Connection ~ 5550 8600
 Connection ~ 6250 8600
 Wire Wire Line
 	6250 8600 6900 8600
-Wire Wire Line
-	5950 7850 6100 7850
-Wire Wire Line
-	6100 7850 6100 7300
 Wire Wire Line
 	3900 7300 3900 7750
 $Comp
@@ -318,12 +286,6 @@ Wire Wire Line
 Wire Wire Line
 	6250 8150 6250 8600
 Wire Wire Line
-	5550 8050 5550 8600
-Wire Wire Line
-	5000 7850 5000 8200
-Wire Wire Line
-	4600 7650 4600 8200
-Wire Wire Line
 	3900 8050 3900 8350
 $Comp
 L Device:R R4
@@ -341,8 +303,6 @@ F 3 "~" H 4250 8450 50  0001 C CNN
 	1    4250 8450
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	3900 7300 6100 7300
 Connection ~ 4250 8600
 Wire Wire Line
 	4250 8600 4400 8600
@@ -352,14 +312,12 @@ Wire Wire Line
 	4250 8300 4250 8200
 Wire Wire Line
 	4250 8200 4600 8200
-Connection ~ 4600 8200
 Wire Wire Line
 	4600 8200 4600 8300
 Wire Wire Line
 	5300 8300 5300 8200
 Wire Wire Line
 	5300 8200 5000 8200
-Connection ~ 5000 8200
 Wire Wire Line
 	5000 8200 5000 8300
 Text Notes 4300 9100 0    50   ~ 0
@@ -719,7 +677,7 @@ U 1 1 5D0F6604
 P 11250 7950
 F 0 "SW3" V 11204 8098 50  0000 L CNN
 F 1 "SW_Push" V 11295 8098 50  0000 L CNN
-F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 11250 8150 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W6.73mm_P2.54mm_LowProfile_JPin" H 11250 8150 50  0001 C CNN
 F 3 "~" H 11250 8150 50  0001 C CNN
 	1    11250 7950
 	0    1    1    0   
@@ -931,4 +889,57 @@ F 3 "" H 11950 4150 50  0001 C CNN
 	1    11950 4150
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5D115F12
+P 5150 7700
+F 0 "J?" H 5000 7400 50  0000 L CNN
+F 1 "Conn_01x03" H 4900 7500 50  0000 L CNN
+F 2 "" H 5150 7700 50  0001 C CNN
+F 3 "~" H 5150 7700 50  0001 C CNN
+	1    5150 7700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 7300 6100 7300
+Wire Wire Line
+	5000 8200 4850 8200
+Wire Wire Line
+	4850 8200 4850 7800
+Wire Wire Line
+	4850 7800 4950 7800
+Connection ~ 5000 8200
+Wire Wire Line
+	4600 8200 4600 7700
+Wire Wire Line
+	4600 7700 4950 7700
+Connection ~ 4600 8200
+Wire Wire Line
+	6100 7600 5600 7600
+Wire Wire Line
+	6100 7300 6100 7600
+Wire Wire Line
+	5600 7700 6250 7700
+Connection ~ 6250 7700
+Wire Wire Line
+	6250 7700 6250 7650
+Wire Wire Line
+	5300 8600 5600 8600
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5D147C15
+P 5400 7700
+F 0 "J?" H 5300 7400 50  0000 L CNN
+F 1 "Conn_01x03" H 5100 7500 50  0000 L CNN
+F 2 "" H 5400 7700 50  0001 C CNN
+F 3 "~" H 5400 7700 50  0001 C CNN
+	1    5400 7700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5600 7800 5600 8600
+Connection ~ 5600 8600
+Wire Wire Line
+	5600 8600 6250 8600
+NoConn ~ 4950 7600
 $EndSCHEMATC
