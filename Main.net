@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\Brandon\Desktop\prototype_1\Main.sch)
-    (date "6/21/2019 4:22:38 PM")
+    (date "6/24/2019 9:23:31 AM")
     (tool "Eeschema (5.1.0)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -38,7 +38,7 @@
       (tstamp 5D214D75))
     (comp (ref U3)
       (value LTC6995-1)
-      (footprint Package_TO_SOT_SMD:TSOT-23-6)
+      (footprint Package_TO_SOT_SMD:TSOT-23-6_HandSoldering)
       (libsource (lib Main-rescue) (part LTC6995-1-CustomSymbols) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 5D0D29CF))
