@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 32)
+    (drawings 34)
     (tracks 269)
     (zones 0)
     (modules 45)
@@ -2095,6 +2095,8 @@
     )
   )
 
+  (gr_line (start 91.72 87.69) (end 149.42 87.61) (layer F.SilkS) (width 0.12))
+  (gr_line (start 91.71 88.47) (end 91.72 87.69) (layer F.SilkS) (width 0.12))
   (gr_text "Bat to Charger" (at 95.55 88.42) (layer F.SilkS) (tstamp 5D1143DF)
     (effects (font (size 0.5 0.5) (thickness 0.125)))
   )
@@ -2108,11 +2110,11 @@
   (gr_text "BQ29707 Pin1" (at 97.26 110.3) (layer F.SilkS)
     (effects (font (size 0.5 0.5) (thickness 0.0625)))
   )
-  (gr_text "EPS Protoboard:" (at 134.94 135.9) (layer F.SilkS)
+  (gr_text "EPS Protoboard:" (at 133.55 133.37) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_text "Ballen\nCrispo\nLiMac\nDmitry\nMcQuaid\nv1.0" (at 145.02 137.41 45) (layer F.SilkS)
-    (effects (font (size 0.5 0.5) (thickness 0.05)))
+  (gr_text "Ballen\nCrispo\nLiMac\nDmitry\nMcQuaid\nv1.0" (at 144.48 137.19 45) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.05)))
   )
   (gr_line (start 50.8 142.24) (end 50.8 63.5) (layer Edge.Cuts) (width 0.05) (tstamp 5D10313E))
   (gr_line (start 149.86 142.24) (end 50.8 142.24) (layer Edge.Cuts) (width 0.05))
